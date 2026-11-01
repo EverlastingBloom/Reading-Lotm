@@ -1,0 +1,5 @@
+*.epub
+__pycache__/
+.env
+.claude/
+work/

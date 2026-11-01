@@ -1,0 +1,41 @@
+Glosarium terjemahan Bahasa Indonesia (dipakai konsisten di semua bab)
+
+Tetap bahasa Inggris (istilah khas novel):
+  Beyonder, Sequence, Nighthawk(s), Seer, Clown, Faceless, Magician, Spirit Vision,
+  nama jalur & Sequence (Demoness, Arbiter, Sheriff, Interrogator, Lawyer, Spectator, dll.),
+  nama dewa/organisasi (Evernight Goddess, Lord of Storms, Eternal Blazing Sun, God of Steam and Machinery,
+  Aurora Order, Mandated Punishers, Machinery Hivemind, Rose School of Thought, Psychology Alchemists,
+  Secret Order, Moses Ascetic Order, Primordial Demoness, True Creator, Hidden Sage),
+  nama kode Klub Tarot (Fool, Justice, Hanged Man, Sun, Magician, Star, World, ...), nama tempat & orang,
+  mata uang (pound, soli, pence)
+
+Diterjemahkan:
+  pathway / Sequence pathway   -> jalur / jalur Sequence
+  potion                       -> ramuan
+  potion formula               -> formula ramuan
+  Sealed Artifact              -> Artefak Tersegel
+  mystical item                -> benda mistis
+  spirituality                 -> spiritualitas
+  ritual magic                 -> sihir ritual
+  divination                   -> divinasi / meramal
+  the Tarot Club               -> Klub Tarot
+  Mr. / Sir                    -> Tuan
+  Mrs. / Madam                 -> Nyonya
+  Miss                         -> Nona
+  Mr. Fool                     -> Tuan Fool
+  Miss Justice                 -> Nona Justice
+  Captain                      -> Kapten
+  Detective                    -> Detektif
+  Church of the Evernight Goddess -> Gereja Evernight Goddess
+  Praise the Lady!             -> Pujilah Sang Dewi!
+  Holy Night Powder            -> Bubuk Malam Suci
+  Chanis Gate                  -> Gerbang Chanis
+  the gray fog                 -> kabut kelabu
+  the Sefirah Castle           -> Kastel Sefirah
+  acting method                -> metode berakting
+  digest (a potion)            -> mencerna (ramuan)
+  lose control                 -> kehilangan kendali
+  mid-Sequence / High-Sequence -> Sequence Menengah / Sequence Tinggi
+
+Gaya: pikiran tokoh ditulis miring (*...*), dialog memakai tanda kutip “...”.
+Judul bab: "Bab N: Judul".

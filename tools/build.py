@@ -138,9 +138,9 @@ def main():
         raw = z.read(path).decode("utf-8")
         h = re.search(r"<h([123])([^>]*)>(.*?)</h\1>", raw, re.S)
         title = strip_tags(h.group(3)) if h else f"Section {i}"
-        invisible_h1 = h and h.group(1) == "1" and "epub-invis" in h.group(2)
+        part_page = h and h.group(1) == "1" and "epub-invis" in h.group(2) and re.match(r"Volume|Side Stories", title)
         num = re.match(r"Chapter (\d+)", title)
-        if invisible_h1:
+        if part_page:
             volume += 1
             kind = "v"
         elif num:
@@ -186,11 +186,20 @@ def main():
             (DATA / lang / f"{i}.html").write_text(body, encoding="utf-8")
 
     volumes = [e["t"]["en"] for e in entries if e["k"] == "v"]
+    covers = [(re.search(r'src="(img/[^"]+)"', bodies[e["id"]]) or [None, None])[1] for e in entries if e["k"] == "v"]
+    opf = z.read("EPUB/content.opf").decode("utf-8")
+    desc = re.search(r"<dc:description>(.*?)</dc:description>", opf, re.S)
+    cover = re.search(r'<item properties="cover-image"[^>]*href="media/([^"]+)"', opf)
+    if cover:
+        images.add(cover.group(1))
     meta = {
         "title": "Lord of the Mysteries",
         "author": "Cuttlefish That Loves Diving",
+        "description": html.unescape(desc.group(1)).strip() if desc else "",
+        "cover": "img/" + cover.group(1) if cover else None,
         "langs": {l: LANG_NAMES.get(l, l) for l in ["en", *translated]},
         "volumes": volumes,
+        "volumeCovers": covers,
         "entries": entries,
     }
     (DATA / "index.json").write_text(json.dumps(meta, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

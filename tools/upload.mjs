@@ -30,6 +30,10 @@ for (const e of meta.entries) {
   }
 }
 
+// Book-level info (description, covers) rides along as a single "meta" row.
+const info = { title: meta.title, author: meta.author, description: meta.description, cover: meta.cover, volumes: meta.volumes, volumeCovers: meta.volumeCovers };
+rows.push({ id: 0, lang: "en", kind: "meta", num: null, volume: 0, title: "meta", content: JSON.stringify(info) });
+
 const BATCH = 50;
 for (let i = 0; i < rows.length; i += BATCH) {
   const batch = rows.slice(i, i + BATCH);
